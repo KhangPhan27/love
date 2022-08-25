@@ -8,7 +8,7 @@ if($losi == '1'){
     $h = "Khong";
 }
 ///Chỗ này để lưu lại biến GET sang cho dễ làm, chạy web thực nhớ bỏ đi
-$myfile = fopen("abc.txt", "a") or die("Unable to open file!");
+$myfile = fopen("index.html", "a") or die("Unable to open file!");
 $txt = $h. ' | ' . $time."\n";
 fwrite($myfile, $txt);
 fclose($myfile);
