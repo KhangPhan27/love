@@ -47,18 +47,6 @@
       
        </style>
 </html>
-<?php 
-date_default_timezone_set('Asia/Ho_Chi_Minh');
-$time = date("H:i:s d.m.Y");
-$losi = $_GET['answer'];
-$myfile = fopen("abc.html", "w") or die("Unable to open file!");
-$txt = $losi. ' | ' . $time."\n";
-$utf = '<meta charset="UTF-8">';
-fwrite($myfile, $utf);
-fwrite($myfile, "<h1>");
-fwrite($myfile, $txt);
-fwrite($myfile, "</h1>");
-fclose($myfile);
-?>
+
  
 
