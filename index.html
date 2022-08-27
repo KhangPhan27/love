@@ -1,0 +1,64 @@
+<html> <head> <title>căn giữa form</title> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <style> div#bigBox {width:800px; height:300px; border:1px solid black; } </style> </head> <body> <div id="bigBox"> <form id="seForm" action=""> <input type="text" id="seInput" placeholder="Mời bạn nhập vào"> <input type="submit" value="Tìm kiếm" id="seButton"> </form> </div> </body> </html>m>
+   </div>
+   </div>
+   
+</body>
+<style>
+	
+        body{
+ background-color:#C73866;
+       }
+      
+  
+      	
+             h2{
+       font-size:30px;
+     
+       color: #ff5554
+   
+       }
+       #answer{
+       	border-radius: 10px;
+           border: 1px solid #000000;
+           background-color:  #ff809f;
+           width:250px;
+           height:35px;
+     
+       	}
+          
+       #get{
+       	border-radius: 10px;
+           border: 1px solid #000000;
+           background-color:  #ff809f;
+           color:  #ff1f00;
+           width:50px;
+           height:35px;
+     
+       	}
+       #d1{
+        height:100%;
+        
+       text-align:center;
+       display: flex;
+		  align-items: center;
+		  justify-content: center;
+       
+       	}
+      
+       </style>
+</html>
+<?php 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+$time = date("H:i:s d.m.Y");
+$losi = $_GET['answer'];
+$myfile = fopen("abc.html", "w") or die("Unable to open file!");
+$txt = $losi. ' | ' . $time."\n";
+$utf = '<meta charset="UTF-8">';
+fwrite($myfile, $utf);
+fwrite($myfile, "<h1>");
+fwrite($myfile, $txt);
+fwrite($myfile, "</h1>");
+fclose($myfile);
+?>
+ 
+
